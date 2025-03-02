@@ -5,15 +5,42 @@
 Aquí exploraremos los conceptos fundamentales de Machine Learning, cómo impacta en nuestra vida diaria y 
 por qué AWS es clave para democratizar el acceso a estas tecnologías.</p>
 
-<h2> ¿Qué es Machine Learning?</h2>
+<h2>¿Qué es Machine Learning?</h2>
+
 <p><strong>Machine Learning</strong>, o <strong>aprendizaje automático</strong>, es una rama de la <strong>inteligencia artificial</strong> 
-que permite a las computadoras aprender patrones a partir de datos, sin necesidad de ser programadas 
-explícitamente para cada tarea.</p>
+que permite a las computadoras aprender patrones a partir de datos, sin necesidad de ser programadas explícitamente para cada tarea.</p>
 
-<p>En vez de definir reglas fijas, el modelo aprende directamente de los datos.</p>
+<p>En un sistema tradicional, un programador define reglas fijas: “Si pasa X, entonces haz Y”. 
+En cambio, en Machine Learning, el modelo analiza datos históricos, detecta patrones y aprende por sí mismo las reglas que explican esos datos.</p>
 
-<h3>Ejemplo:</h3>
-<p>Una app de streaming puede recomendarte películas al aprender de tus gustos pasados. Eso es Machine Learning en acción.</p>
+<h3>Un poco de historia</h3>
+<p>El término <strong>Machine Learning</strong> fue acuñado por <strong>Arthur Samuel</strong> en 1959, 
+cuando desarrolló un programa capaz de jugar Damas, mejorando su desempeño a medida que acumulaba partidas.</p>
+
+<p>A lo largo de los años, esta idea evolucionó gracias a:</p>
+<ul>
+    <li>El crecimiento exponencial de los datos digitales.</li>
+    <li>La mejora en la potencia computacional (especialmente GPUs).</li>
+    <li>Avances matemáticos y en algoritmos de optimización.</li>
+</ul>
+
+<h3>¿Cómo encaja Machine Learning dentro de la Inteligencia Artificial?</h3>
+<p>Para entender mejor el panorama completo, es útil visualizar cómo encajan los conceptos:</p>
+<ul>
+    <li><strong>Inteligencia Artificial (IA):</strong> Campo general que busca que las máquinas imiten la inteligencia humana.</li>
+    <li><strong>Machine Learning (ML):</strong> Subcategoría de IA enfocada en aprender patrones directamente desde los datos.</li>
+    <li><strong>Deep Learning (DL):</strong> Subconjunto de ML, basado en redes neuronales profundas, inspirado en el cerebro humano.</li>
+</ul>
+
+<h3>Ejemplo práctico</h3>
+<p>Imagina una app de streaming. En lugar de programar reglas fijas ("Si el usuario ve Matrix, recomiéndale Inception"), 
+el sistema analiza miles de usuarios y aprende que aquellos que vieron Matrix también tienden a ver Inception. 
+Ese proceso de descubrimiento automático es lo que hace tan potente a Machine Learning.</p>
+
+<p><strong>Inserta aquí tu imagen:</strong></p>
+<p><img src="ruta/a/tu/imagen.png" alt="IA vs ML vs DL"></p>
+
+
 
 <h2>Tipos de Machine Learning</h2>
 <ul>
