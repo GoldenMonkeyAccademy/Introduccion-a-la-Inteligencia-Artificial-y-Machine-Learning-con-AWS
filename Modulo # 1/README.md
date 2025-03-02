@@ -37,7 +37,6 @@ cuando desarrolló un programa capaz de jugar Damas, mejorando su desempeño a m
 el sistema analiza miles de usuarios y aprende que aquellos que vieron Matrix también tienden a ver Inception. 
 Ese proceso de descubrimiento automático es lo que hace tan potente a Machine Learning.</p>
 
-<p><strong>Inserta aquí tu imagen:</strong></p>
 <p><img src="https://github.com/mrkali88/Introduccion-a-la-Inteligencia-Artificial-y-Machine-Learning-con-AWS/blob/main/images/artificial-intelligence_machine-learning_deep-learning_difference.png" alt="IA vs ML vs DL"></p>
 
 
