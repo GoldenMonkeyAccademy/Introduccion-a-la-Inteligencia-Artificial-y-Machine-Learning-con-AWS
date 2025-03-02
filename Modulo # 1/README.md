@@ -104,12 +104,26 @@ Ahora, gracias a <strong>AWS</strong>, cualquier empresa o persona puede crear m
 
 
 <h2>Configuración Básica del Entorno AWS</h2>
+<p>Antes de empezar a entrenar modelos o trabajar con datos, es fundamental asegurarnos de que tienes un entorno básico correctamente configurado en AWS. 
+Esto te permitirá realizar todos los ejercicios prácticos y seguir el curso sin interrupciones.</p>
+
+<p>Estos son los pasos clave que necesitas completar:</p>
+
 <ul>
-    <li>✅ Crear cuenta gratuita en AWS.</li>
-    <li>✅ Configurar permisos de IAM para SageMaker y S3.</li>
-    <li>✅ Crear un bucket en S3.</li>
-    <li>✅ Iniciar SageMaker Studio.</li>
+    <li>✅ <strong>Crear una cuenta gratuita en AWS (Free Tier):</strong> Si aún no tienes una cuenta, puedes registrarte gratuitamente y acceder a muchos servicios sin costo durante el primer año.</li>
+
+    <li>✅ <strong>Configurar permisos con IAM (Identity and Access Management):</strong> En AWS, cada acción está controlada por permisos. Te ayudaremos a crear un rol específico con permisos para SageMaker, S3 y Glue, 
+    que son servicios clave en el ciclo de vida de Machine Learning.</li>
+
+    <li>✅ <strong>Crear un bucket en S3:</strong> S3 es el almacenamiento principal donde guardaremos nuestros datasets, resultados de modelos y artefactos. Tener este bucket listo desde el inicio es esencial.</li>
+
+    <li>✅ <strong>Iniciar SageMaker Studio:</strong> SageMaker Studio es el entorno de desarrollo completo para Machine Learning en AWS. Desde aquí podrás explorar datos, entrenar modelos y monitorear su desempeño.</li>
 </ul>
+
+<p>Sin esta configuración inicial, los ejercicios prácticos que haremos más adelante no funcionarían correctamente. 
+Por eso, dedicarle unos minutos ahora a preparar tu entorno te ahorrará dolores de cabeza más adelante.</p>
+
+
 
 <h2>Conclusión y Próximos Pasos</h2>
 <p>Con esto completamos la primera etapa: entendimos qué es Machine Learning, cómo se clasifica, 
