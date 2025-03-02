@@ -87,13 +87,21 @@ Ese proceso de descubrimiento automático es lo que hace tan potente a Machine L
 <p>Antes, trabajar con IA requería infraestructura costosa y equipos especializados. 
 Ahora, gracias a <strong>AWS</strong>, cualquier empresa o persona puede crear modelos con servicios gestionados.</p>
 
-<h3>Servicios clave:</h3>
+<h3>Servicios clave de AWS para IA/ML</h3>
 <ul>
-    <li>✅ <strong>Amazon SageMaker:</strong> Entrenamiento, optimización y despliegue de modelos.</li>
-    <li>✅ <strong>Amazon Rekognition:</strong> Análisis de imágenes y videos.</li>
-    <li>✅ <strong>Amazon Comprehend:</strong> Análisis de texto.</li>
-    <li>✅ <strong>Amazon Bedrock:</strong> IA Generativa con modelos fundacionales.</li>
+    <li>✅ <strong>Amazon SageMaker:</strong> Plataforma completa para entrenar, optimizar, desplegar y monitorear modelos de Machine Learning.</li>
+    <li>✅ <strong>Amazon Rekognition:</strong> Análisis automático de imágenes y videos (detección de objetos, caras, texto en imágenes, etc.).</li>
+    <li>✅ <strong>Amazon Comprehend:</strong> Procesamiento de lenguaje natural (análisis de sentimientos, detección de entidades, temas, etc.).</li>
+    <li>✅ <strong>Amazon Bedrock:</strong> Acceso directo a modelos fundacionales (Foundation Models) para IA Generativa.</li>
+    <li>✅ <strong>Amazon Textract:</strong> Extracción automática de texto y datos estructurados desde documentos escaneados.</li>
+    <li>✅ <strong>Amazon Transcribe:</strong> Servicio para convertir automáticamente audio a texto (Speech to Text).</li>
+    <li>✅ <strong>Amazon Polly:</strong> Conversión de texto a voz (Text to Speech) usando voces naturales.</li>
+    <li>✅ <strong>AWS Glue:</strong> Servicio ETL (Extract, Transform, Load) para preparar datos antes del modelado.</li>
+    <li>✅ <strong>Amazon Kinesis:</strong> Ingesta de datos en tiempo real, útil para proyectos de ML en streaming.</li>
+    <li>✅ <strong>Amazon Forecast:</strong> Servicio especializado en predicciones de series temporales (demandas, ventas, etc.).</li>
+    <li>✅ <strong>Amazon Personalize:</strong> Servicio gestionado para crear sistemas de recomendación personalizados.</li>
 </ul>
+
 
 <h2>Configuración Básica del Entorno AWS</h2>
 <ul>
