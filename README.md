@@ -1,4 +1,4 @@
-# Introduccion-a-la-Inteligencia-Artificial-y-Machine-Learning-con-AWS
+# Introduccion a la Inteligencia Artificial y Machine Learning con AWS
 Descubre cómo funciona la Inteligencia Artificial y el Machine Learning, y aprende a aplicarlos usando los servicios de AWS. Un curso práctico, claro y sin tecnicismos complejos, ideal para entender IA y dar tus primeros pasos en proyectos reales.
 
 Introducción a la Inteligencia Artificial y Machine Learning con AWS
