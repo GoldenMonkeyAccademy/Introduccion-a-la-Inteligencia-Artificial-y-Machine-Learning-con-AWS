@@ -110,15 +110,21 @@ Esto te permitirá realizar todos los ejercicios prácticos y seguir el curso si
 <p>Estos son los pasos clave que necesitas completar:</p>
 
 <ul>
-    <li>✅ <strong>Crear una cuenta gratuita en AWS (Free Tier):</strong> Si aún no tienes una cuenta, puedes registrarte gratuitamente y acceder a muchos servicios sin costo durante el primer año.</li>
-
-    <li>✅ <strong>Configurar permisos con IAM (Identity and Access Management):</strong> En AWS, cada acción está controlada por permisos. Te ayudaremos a crear un rol específico con permisos para SageMaker, S3 y Glue, 
-    que son servicios clave en el ciclo de vida de Machine Learning.</li>
-
-    <li>✅ <strong>Crear un bucket en S3:</strong> S3 es el almacenamiento principal donde guardaremos nuestros datasets, resultados de modelos y artefactos. Tener este bucket listo desde el inicio es esencial.</li>
-
-    <li>✅ <strong>Iniciar SageMaker Studio:</strong> SageMaker Studio es el entorno de desarrollo completo para Machine Learning en AWS. Desde aquí podrás explorar datos, entrenar modelos y monitorear su desempeño.</li>
+    <li>✅ <strong>Crear una cuenta gratuita en AWS (Free Tier):</strong> 
+    Si aún no tienes una cuenta, puedes registrarte gratuitamente y acceder a muchos servicios sin costo durante el primer año. 
+    <br>🔗 <a href="https://aws.amazon.com/free/" target="_blank">Guía oficial para crear una cuenta AWS Free Tier</a></li>
+    <li>✅ <strong>Configurar permisos con IAM (Identity and Access Management):</strong> 
+    En AWS, cada acción requiere permisos específicos. Crearemos un rol con acceso a SageMaker, S3 y Glue, que son servicios clave para el ciclo de vida de Machine Learning. 
+    <br>🔗 <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html" target="_blank">Introducción a IAM y cómo crear roles</a></li>
+    <li>✅ <strong>Crear un bucket en S3:</strong> 
+    S3 es el lugar donde almacenaremos nuestros datasets, modelos entrenados y otros artefactos. Tener este bucket preparado desde el inicio es esencial para trabajar sin interrupciones. 
+    <br>🔗 <a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html" target="_blank">Cómo crear un bucket en Amazon S3</a></li>
+    <li>✅ <strong>Iniciar SageMaker Studio:</strong> 
+    SageMaker Studio es el entorno visual donde exploraremos datos, entrenaremos modelos y realizaremos pruebas directamente desde la consola de AWS. 
+    <br>🔗 <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/gs-studio.html" target="_blank">Guía oficial para lanzar SageMaker Studio</a></li>
 </ul>
+
+
 
 <p>Sin esta configuración inicial, los ejercicios prácticos que haremos más adelante no funcionarían correctamente. 
 Por eso, dedicarle unos minutos ahora a preparar tu entorno te ahorrará dolores de cabeza más adelante.</p>
