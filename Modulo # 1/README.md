@@ -1,5 +1,4 @@
 <h1>Módulo 1: Introducción a la IA, el ML y el ecosistema AWS</h1>
-
 <h2>Introducción</h2>
 <p>Bienvenidos al primer módulo de este curso sobre <strong>Inteligencia Artificial y Machine Learning con AWS</strong>. 
 Aquí exploraremos los conceptos fundamentales de Machine Learning, cómo impacta en nuestra vida diaria y 
