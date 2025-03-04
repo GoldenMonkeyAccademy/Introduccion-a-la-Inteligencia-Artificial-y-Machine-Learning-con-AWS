@@ -39,41 +39,65 @@ cuando desarrolló un programa capaz de jugar Damas, mejorando su desempeño a m
 el sistema analiza miles de usuarios y aprende que aquellos que vieron Matrix también tienden a ver Inception. 
 Ese proceso de descubrimiento automático es lo que hace tan potente a Machine Learning.</p>
 
-
-
-
 <h2>Tipos de Machine Learning</h2>
+<h3>1️⃣ Aprendizaje Supervisado</h3>
+<p>En el aprendizaje supervisado, el modelo se entrena con datos donde ya conocemos la respuesta correcta. Cada ejemplo de entrenamiento incluye:
+    <ul>
+        <li>📥 Características o atributos (tamaño de la casa, número de habitaciones, ubicación).</li>
+        <li>📤 Etiqueta o resultado (precio de la casa).</li>
+    </ul>
+    El objetivo es aprender una **relación matemática** entre esas características y la etiqueta, para que el modelo pueda predecir el resultado en ejemplos nuevos.
+</p>
+<p><strong>Ejemplos reales:</strong></p>
 <ul>
-    <li><strong>Supervisado:</strong> El modelo se entrena con datos etiquetados, es decir, datos donde conocemos la respuesta correcta.
-        <br>✅ Ejemplo: predecir el precio de una casa basado en su tamaño y ubicación.
-        <br>📊 Algoritmos comunes:
-        <ul>
-            <li>Regresión Lineal (predicción de valores numéricos).</li>
-            <li>Regresión Logística (clasificación binaria: sí/no).</li>
-            <li>Árboles de Decisión y Random Forest.</li>
-            <li>Support Vector Machines (SVM).</li>
-        </ul>
-    </li>
-    <li><strong>No Supervisado:</strong> El modelo explora datos sin etiquetas y busca patrones ocultos.
-        <br>✅ Ejemplo: segmentar clientes según su comportamiento de compra.
-        <br>📊 Algoritmos comunes:
-        <ul>
-            <li>Clustering (K-Means, DBSCAN).</li>
-            <li>Reducción de dimensionalidad (PCA - Análisis de Componentes Principales).</li>
-            <li>Modelos de asociación (Apriori, FP-Growth).</li>
-        </ul>
-    </li>
-    <li><strong>Aprendizaje por Refuerzo:</strong> El modelo aprende por prueba y error, recibiendo recompensas por decisiones correctas.
-        <br>✅ Ejemplo: un coche autónomo que mejora su conducción tras cada simulación.
-        <br>📊 Algoritmos comunes:
-        <ul>
-            <li>Q-Learning.</li>
-            <li>Deep Q Networks (DQN).</li>
-            <li>Policy Gradient Methods.</li>
-            <li>Actor-Critic.</li>
-        </ul>
-    </li>
+    <li>Predecir el riesgo de impago de un cliente (etiqueta = "paga" o "no paga").</li>
+    <li>Detectar si un email es spam o no.</li>
 </ul>
+
+<h3>2️⃣ Aprendizaje No Supervisado</h3>
+<p>En este caso, no hay etiquetas conocidas. Solo tenemos características y el objetivo es encontrar **patrones ocultos o estructuras** en los datos.</p>
+<p><strong>Ejemplos reales:</strong></p>
+<ul>
+    <li>Segmentar clientes en grupos según su comportamiento de compra.</li>
+    <li>Detectar productos que suelen comprarse juntos (reglas de asociación).</li>
+</ul>
+
+<h3>3️⃣ Aprendizaje por Refuerzo</h3>
+<p>Este es un enfoque completamente distinto, inspirado en cómo aprenden los humanos y animales. Aquí, un "agente" aprende interactuando con un entorno.</p>
+<p>El agente ejecuta acciones, recibe recompensas o penalizaciones, y ajusta sus decisiones para maximizar esas recompensas en el futuro.</p>
+<p><strong>Ejemplos reales:</strong></p>
+<ul>
+    <li>Un robot aprendiendo a caminar.</li>
+    <li>Un algoritmo aprendiendo a jugar videojuegos (como AlphaGo de DeepMind).</li>
+</ul>
+
+<h2>Algoritmos Clave de Machine Learning</h2>
+
+<h3>📊 Algoritmos comunes para Aprendizaje Supervisado</h3>
+<ul>
+    <li><strong>Regresión Lineal:</strong> Un modelo simple que encuentra una línea recta que mejor explica la relación entre las características y el resultado. Ideal para predecir valores continuos (ventas, temperaturas, etc.).</li>
+    <li><strong>Regresión Logística:</strong> Similar, pero enfocado en clasificaciones binarias. El modelo devuelve la probabilidad de que algo pertenezca a una categoría o la otra (spam/no spam, aprobado/rechazado).</li>
+    <li><strong>Árboles de Decisión:</strong> Modelos que crean un "diagrama de decisiones", donde cada nodo representa una pregunta (¿La casa tiene más de 3 cuartos?) y cada rama lleva a un resultado.</li>
+    <li><strong>Random Forest:</strong> Un conjunto (o bosque) de muchos árboles de decisión, cada uno entrenado con una parte diferente de los datos, para mejorar la precisión.</li>
+    <li><strong>SVM (Support Vector Machines):</strong> Un algoritmo matemático que encuentra la mejor frontera posible entre dos clases. Es útil cuando los datos no son perfectamente separables.</li>
+</ul>
+
+<h3>📊 Algoritmos comunes para Aprendizaje No Supervisado</h3>
+<ul>
+    <li><strong>K-Means:</strong> Algoritmo de clustering que agrupa puntos similares en "k" grupos. Útil para segmentar clientes o productos.</li>
+    <li><strong>DBSCAN:</strong> Similar a K-Means, pero detecta clusters de diferentes tamaños y forma irregular, lo cual es útil para datos reales más complejos.</li>
+    <li><strong>PCA (Análisis de Componentes Principales):</strong> Algoritmo de reducción de dimensionalidad que identifica las variables más importantes y descarta las irrelevantes.</li>
+    <li><strong>Apriori:</strong> Detecta reglas de asociación (si alguien compra pan, probablemente compre mantequilla) y es clave para análisis de cestas de compra.</li>
+</ul>
+
+<h3>📊 Algoritmos comunes para Aprendizaje por Refuerzo</h3>
+<ul>
+    <li><strong>Q-Learning:</strong> El agente aprende una tabla que le dice cuál es la mejor acción en cada situación.</li>
+    <li><strong>Deep Q Networks (DQN):</strong> En vez de una tabla, usa una red neuronal para aprender estrategias más complejas.</li>
+    <li><strong>Policy Gradient:</strong> El modelo aprende directamente cuál es la mejor política (conjunto de reglas de acción) para maximizar recompensas.</li>
+    <li><strong>Actor-Critic:</strong> Una combinación poderosa donde un "actor" propone acciones y un "crítico" evalúa qué tan buenas fueron.</li>
+</ul>
+
 
 <h2>Aplicaciones Reales de Machine Learning</h2>
 <ul>
@@ -143,3 +167,18 @@ cómo impacta en el día a día, y por qué AWS es una plataforma clave.</p>
     <li>🧰 Guía rápida de configuración en AWS.</li>
     <li>🔗 <a href="https://aws.amazon.com/es/blogs/machine-learning/" target="_blank">Blog oficial de AWS Machine Learning</a></li>
 </ul>
+
+
+<h2>💡 Bonus:¿Qué es una Red Neuronal?</h2>
+<p>Una <strong>Red Neuronal Artificial</strong> es un modelo de Machine Learning inspirado en cómo funciona el cerebro humano. Está formada por capas de nodos (neuronas) conectadas entre sí:</p>
+
+<ul>
+    <li><strong>Capa de entrada:</strong> Recibe las características (por ejemplo, tamaño de la casa, ubicación, etc.).</li>
+    <li><strong>Capas ocultas:</strong> Procesan la información combinando pesos y funciones matemáticas.</li>
+    <li><strong>Capa de salida:</strong> Devuelve la predicción final (precio de la casa, sí/no, etc.).</li>
+</ul>
+
+<p>Las redes neuronales son muy flexibles y pueden resolver problemas complejos, pero necesitan muchos datos y mucha potencia de cómputo. 
+Cuando la red tiene muchas capas ocultas, la llamamos <strong>Red Neuronal Profunda (Deep Neural Network).</strong></p>
+
+<p>En este curso, usaremos redes neuronales cuando lleguemos a temas como visión por computadora o procesamiento de lenguaje natural.</p>
