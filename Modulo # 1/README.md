@@ -5,6 +5,37 @@
 Aquí exploraremos los conceptos fundamentales de Machine Learning, cómo impacta en nuestra vida diaria y 
 por qué AWS es clave para democratizar el acceso a estas tecnologías.</p>
 
+<hr>
+
+<h2>¿Qué es la Inteligencia Artificial?</h2>
+
+<p><strong>Inteligencia Artificial (IA)</strong> es un área de la informática que busca desarrollar sistemas capaces de realizar tareas que normalmente requieren inteligencia humana. 
+Esto incluye entender lenguaje natural, reconocer imágenes, resolver problemas complejos, aprender de la experiencia y tomar decisiones.</p>
+
+<p>En términos simples, la IA busca crear "máquinas inteligentes" que puedan:</p>
+<ul>
+    <li>Aprender de los datos (como un humano aprende de la experiencia).</li>
+    <li>Adaptarse a nuevas situaciones.</li>
+    <li>Automatizar decisiones sin intervención humana directa.</li>
+</ul>
+
+<p><strong>¿Cómo se logra esto?</strong></p>
+<p>Dentro del gran campo de la IA, existen diferentes enfoques o subáreas. Una de las más exitosas es precisamente el <strong>Machine Learning</strong>, que consiste en enseñar a las computadoras a aprender directamente de los datos.</p>
+
+<p>Para entender la relación, podemos verlo así:</p>
+<ul>
+    <li><strong>Inteligencia Artificial:</strong> El gran objetivo de crear máquinas inteligentes.</li>
+    <li><strong>Machine Learning:</strong> Un conjunto de técnicas dentro de la IA para lograr ese objetivo.</li>
+    <li><strong>Deep Learning:</strong> Un subconjunto de ML que usa redes neuronales profundas.</li>
+</ul>
+
+<p>💡 En este curso nos enfocaremos principalmente en Machine Learning, pero siempre dentro del contexto más amplio de la Inteligencia Artificial.</p>
+
+<p>Con esta base, ahora sí podemos profundizar en qué es Machine Learning y cómo AWS nos ayuda a aplicar estas técnicas en el mundo real.</p>
+
+<hr>
+
+
 <h2>¿Qué es Machine Learning?</h2>
 
 <p><strong>Machine Learning</strong>, o <strong>aprendizaje automático</strong>, es una rama de la <strong>inteligencia artificial</strong> 
@@ -38,7 +69,7 @@ cuando desarrolló un programa capaz de jugar Damas, mejorando su desempeño a m
 <p>Imagina una app de streaming. En lugar de programar reglas fijas ("Si el usuario ve Matrix, recomiéndale Inception"), 
 el sistema analiza miles de usuarios y aprende que aquellos que vieron Matrix también tienden a ver Inception. 
 Ese proceso de descubrimiento automático es lo que hace tan potente a Machine Learning.</p>
-
+<hr>
 <h2>Tipos de Machine Learning</h2>
 <h3>1️⃣ Aprendizaje Supervisado</h3>
 <p>En el aprendizaje supervisado, el modelo se entrena con datos donde ya conocemos la respuesta correcta. Cada ejemplo de entrenamiento incluye:
@@ -70,7 +101,7 @@ Ese proceso de descubrimiento automático es lo que hace tan potente a Machine L
     <li>Un robot aprendiendo a caminar.</li>
     <li>Un algoritmo aprendiendo a jugar videojuegos (como AlphaGo de DeepMind).</li>
 </ul>
-
+<hr>
 <h2>Algoritmos Clave de Machine Learning</h2>
 
 <h3>📊 Algoritmos comunes para Aprendizaje Supervisado</h3>
@@ -98,7 +129,7 @@ Ese proceso de descubrimiento automático es lo que hace tan potente a Machine L
     <li><strong>Actor-Critic:</strong> Una combinación poderosa donde un "actor" propone acciones y un "crítico" evalúa qué tan buenas fueron.</li>
 </ul>
 
-
+<hr>
 <h2>Aplicaciones Reales de Machine Learning</h2>
 <ul>
     <li>🚗 Autos Autónomos: reconocimiento de señales y peatones.</li>
@@ -125,7 +156,7 @@ Ahora, gracias a <strong>AWS</strong>, cualquier empresa o persona puede crear m
     <li>✅ <strong>Amazon Forecast:</strong> Servicio especializado en predicciones de series temporales (demandas, ventas, etc.).</li>
     <li>✅ <strong>Amazon Personalize:</strong> Servicio gestionado para crear sistemas de recomendación personalizados.</li>
 </ul>
-
+<hr>
 
 <h2>Configuración Básica del Entorno AWS</h2>
 <p>Antes de empezar a entrenar modelos o trabajar con datos, es fundamental asegurarnos de que tienes un entorno básico correctamente configurado en AWS. 
@@ -152,7 +183,7 @@ Esto te permitirá realizar todos los ejercicios prácticos y seguir el curso si
 
 <p>Sin esta configuración inicial, los ejercicios prácticos que haremos más adelante no funcionarían correctamente. 
 Por eso, dedicarle unos minutos ahora a preparar tu entorno te ahorrará dolores de cabeza más adelante.</p>
-
+<hr>
 
 
 <h2>Conclusión y Próximos Pasos</h2>
@@ -167,7 +198,7 @@ cómo impacta en el día a día, y por qué AWS es una plataforma clave.</p>
     <li>🧰 Guía rápida de configuración en AWS.</li>
     <li>🔗 <a href="https://aws.amazon.com/es/blogs/machine-learning/" target="_blank">Blog oficial de AWS Machine Learning</a></li>
 </ul>
-
+<hr>
 
 <h2>💡 Bonus:¿Qué es una Red Neuronal?</h2>
 <p>Una <strong>Red Neuronal Artificial</strong> es un modelo de Machine Learning inspirado en cómo funciona el cerebro humano. Está formada por capas de nodos (neuronas) conectadas entre sí:</p>
