@@ -36,14 +36,145 @@ Al final, crearás tu primer pipeline real de datos en AWS, combinando almacenam
 </ul>
 <p>La idea es guardar los datos tal como llegan, sin filtrarlos ni transformarlos de inmediato. Esto permite explorarlos o procesarlos más adelante según las necesidades.</p>
 
-<h4>✅ Amazon S3</h4>
-<p><strong>Amazon S3</strong> es el servicio principal para construir Data Lakes en AWS. Es un almacenamiento flexible y económico donde puedes guardar cualquier tipo de archivo.</p>
-<p><strong>¿Por qué es clave para IA/ML?</strong></p>
+<h2>Amazon S3: El Corazón de un Data Lake en AWS</h2>
+
+<p><strong>Amazon S3</strong> (Simple Storage Service) es el servicio de almacenamiento más usado en AWS y es clave para proyectos de Machine Learning porque actúa como el repositorio central de datos. En un Data Lake, S3 guarda archivos crudos, transformados, modelos entrenados y artefactos de ML.</p>
+
+<h3>¿Por qué S3 es ideal para IA/ML?</h3>
 <ul>
-    <li>Compatible con todos los formatos.</li>
-    <li>Escalable y económico.</li>
-    <li>Integrado con Glue, SageMaker, Athena y más.</li>
+    <li>✅ <strong>Flexibilidad:</strong> Soporta múltiples formatos: CSV, JSON, Parquet, ORC, imágenes, audio y video.</li>
+    <li>✅ <strong>Escalabilidad:</strong> Crece automáticamente sin límites de tamaño.</li>
+    <li>✅ <strong>Integración:</strong> Compatible con Glue, Athena, SageMaker y otros servicios de datos y ML.</li>
 </ul>
+
+<hr>
+
+<h2>Clases de Almacenamiento en Amazon S3</h2>
+<p>No todos los datos tienen el mismo patrón de acceso. Por eso, Amazon S3 ofrece múltiples <strong>clases de almacenamiento</strong>, cada una optimizada para un caso específico.</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Clase</th>
+            <th>Descripción</th>
+            <th>Casos de uso recomendados</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>S3 Standard</strong></td>
+            <td>Almacenamiento de alta disponibilidad y durabilidad para datos accedidos frecuentemente.</td>
+            <td>Datos operacionales, datasets activos, logs recientes.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 Intelligent-Tiering</strong></td>
+            <td>Mueve automáticamente datos entre acceso frecuente e infrecuente según patrones de acceso.</td>
+            <td>Datos con patrones de acceso variables o desconocidos.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 Standard-IA</strong></td>
+            <td>Almacenamiento económico para datos accedidos esporádicamente.</td>
+            <td>Backups de datos recientes, reportes históricos.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 One Zone-IA</strong></td>
+            <td>Similar a Standard-IA, pero almacenado en una sola AZ (zona de disponibilidad).</td>
+            <td>Datos fácilmente reproducibles o no críticos, copias secundarias.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 Glacier Instant Retrieval</strong></td>
+            <td>Archivado económico con acceso casi inmediato (milisegundos).</td>
+            <td>Archivos históricos de acceso ocasional que aún requieren baja latencia.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 Glacier Flexible Retrieval</strong></td>
+            <td>Archivado profundo, recuperación flexible (minutos u horas).</td>
+            <td>Backups a largo plazo, cumplimiento normativo.</td>
+        </tr>
+        <tr>
+            <td><strong>S3 Glacier Deep Archive</strong></td>
+            <td>La opción más barata para archivado a muy largo plazo (retrieval en horas).</td>
+            <td>Archivos regulatorios, auditorías históricas, data fría.</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<p><strong>Nota:</strong> Puedes combinar estas clases dentro de un mismo bucket usando <strong>Lifecycle Rules</strong> para mover automáticamente los objetos conforme envejecen.</p>
+
+
+<hr>
+
+<h2>Lifecycle Rules: Reglas Automáticas de Gestión</h2>
+<p>Con las <strong>Lifecycle Rules</strong>, puedes automatizar el movimiento de datos entre clases, por ejemplo:</p>
+<ul>
+    <li>🔄 Mover archivos crudos a Glacier después de 90 días.</li>
+    <li>🗑️ Eliminar archivos temporales después de 30 días.</li>
+</ul>
+<p>Estas reglas son clave para controlar costos en proyectos de IA donde los datasets pueden ser enormes.</p>
+
+<hr>
+
+<h2>Políticas de Acceso (Bucket Policies)</h2>
+<p>La seguridad es fundamental. Con las <strong>Bucket Policies</strong>, defines quién puede leer o escribir en tus buckets y bajo qué condiciones.</p>
+<p><strong>Ejemplos:</strong></p>
+<ul>
+    <li>🔒 Solo SageMaker puede leer el bucket de entrenamiento.</li>
+    <li>🔒 Solo Glue puede escribir en el bucket de datos limpios.</li>
+    <li>🌍 Permitir acceso público solo a ciertos archivos (catálogos o documentación).</li>
+</ul>
+<p>Las políticas se definen en JSON y permiten granularidad total.</p>
+
+<hr>
+
+<h2>Cifrado (Encryption)</h2>
+<p>S3 ofrece varias opciones para cifrar datos en reposo:</p>
+<ul>
+    <li>✅ <strong>SSE-S3:</strong> AWS gestiona las claves por ti.</li>
+    <li>✅ <strong>SSE-KMS:</strong> Usa AWS KMS para control total sobre claves.</li>
+    <li>✅ <strong>Client-side encryption:</strong> Tú mismo cifras los datos antes de subirlos.</li>
+</ul>
+<p>Además, puedes habilitar <strong>Default Encryption</strong> para que cualquier archivo subido se cifre automáticamente.</p>
+
+<hr>
+
+<h2>VPC Endpoints</h2>
+<p>Si trabajas desde una VPC privada, puedes habilitar un <strong>VPC Endpoint para S3</strong>. Esto permite que el tráfico de datos fluya directamente dentro de la red de AWS sin pasar por Internet pública, mejorando:</p>
+<ul>
+    <li>✅ Seguridad (menos exposición).</li>
+    <li>✅ Rendimiento (latencias menores).</li>
+    <li>✅ Costos (menos uso de NAT Gateways).</li>
+</ul>
+
+<hr>
+
+<h2>Manos a la Obra (Hands On)</h2>
+<p>Como práctica, se recomienda hacer lo siguiente:</p>
+<ol>
+    <li>Crear un bucket en S3 y entender sus opciones de configuración (clase, versión, reglas de lifecycle).</li>
+    <li>Subir un archivo CSV y observar su URL pública (si es permitido).</li>
+    <li>Configurar una bucket policy que solo permita acceso desde tu cuenta.</li>
+    <li>Configurar Default Encryption usando KMS.</li>
+    <li>Si tienes una VPC, configurar un Endpoint para S3 y probar la conexión.</li>
+</ol>
+
+<hr>
+
+<h2>Enlaces Relevantes</h2>
+<ul>
+    <li><a href="https://docs.aws.amazon.com/s3/" target="_blank">Documentación oficial de Amazon S3</a></li>
+    <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html" target="_blank">Clases de almacenamiento</a></li>
+    <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html" target="_blank">Lifecycle Rules</a></li>
+    <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-policy-alternatives-guidelines.html" target="_blank">Bucket Policies</a></li>
+    <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/serv-side-encryption.html" target="_blank">Cifrado en S3</a></li>
+    <li><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/privatelink-interface-endpoints.html" target="_blank">VPC Endpoints para S3</a></li>
+</ul>
+
+<hr>
+
+<h2>Conclusión</h2>
+<p>Amazon S3 es mucho más que un simple almacenamiento: es la base para un Data Lake moderno en AWS, con controles de seguridad avanzados, optimización de costos automática y compatibilidad directa con los principales servicios de Machine Learning como SageMaker, Glue y Athena.</p>
+
 
 <hr>
 
