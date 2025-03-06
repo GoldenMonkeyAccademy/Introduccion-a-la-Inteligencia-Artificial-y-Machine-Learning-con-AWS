@@ -15,6 +15,15 @@ Aproximadamente, el contenido se divide así:</p>
     <li>🔐 <strong>Seguridad y gobernanza (24%):</strong> IAM, cifrado, control de acceso y optimización de costos.</li>
 </ul>
 
+<h2>Formato General del Examen</h2>
+<ul>
+    <li>📄 <strong>Cantidad de preguntas:</strong> 65 preguntas.</li>
+    <li>⏱️ <strong>Duración:</strong> 180 minutos (3 horas).</li>
+    <li>🌐 <strong>Formato:</strong> Examen en línea (proctored) o presencial en centro autorizado Pearson VUE.</li>
+    <li>🗣️ <strong>Idioma:</strong> Disponible en inglés, español, japonés, coreano y chino.</li>
+    <li>💰 <strong>Costo:</strong> 300 USD (descuentos disponibles con vouchers o créditos de entrenamiento).</li>
+</ul>
+
 <p>En el examen te presentan:</p>
 <ul>
     <li>✅ Casos prácticos reales (escenarios tipo empresa).</li>
