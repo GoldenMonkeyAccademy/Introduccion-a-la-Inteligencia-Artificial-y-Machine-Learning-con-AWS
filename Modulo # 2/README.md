@@ -36,7 +36,7 @@ Al final, crearás tu primer pipeline real de datos en AWS, combinando almacenam
 </ul>
 <p>La idea es guardar los datos tal como llegan, sin filtrarlos ni transformarlos de inmediato. Esto permite explorarlos o procesarlos más adelante según las necesidades.</p>
 
-<h2>Amazon S3: El Corazón de un Data Lake en AWS</h2>
+<h2>Amazon S3</h2>
 
 <p><strong>Amazon S3</strong> (Simple Storage Service) es el servicio de almacenamiento más usado en AWS y es clave para proyectos de Machine Learning porque actúa como el repositorio central de datos. En un Data Lake, S3 guarda archivos crudos, transformados, modelos entrenados y artefactos de ML.</p>
 
