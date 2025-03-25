@@ -6,18 +6,43 @@ Al final, crearás tu primer pipeline real de datos en AWS, combinando almacenam
 
 <hr>
 
-<h2>¿Qué es un buen dataset para IA/ML?</h2>
-<p>Un modelo es tan bueno como los datos con los que lo entrenas. Por eso, entender qué hace que un dataset sea útil es crítico. Un buen dataset tiene:</p>
+<section>
+  <h2>¿Qué es un buen dataset para IA/ML?</h2>
+  <p>Un modelo es tan bueno como los datos con los que lo entrenas. Por eso, entender qué hace que un dataset sea útil es <strong>crítico</strong>. A continuación, te explicamos las características clave de un buen dataset, junto con ejemplos concretos:</p>
 
-<ul>
-    <li><strong>Calidad:</strong> Datos sin errores (fechas inválidas, campos vacíos, registros duplicados o inconsistentes).</li>
-    <li><strong>Volumen:</strong> Suficiente cantidad para representar patrones reales. Un modelo no puede generalizar si tiene muy pocos ejemplos.</li>
-    <li><strong>Variedad:</strong> Diversidad de fuentes y formatos, reflejando el entorno real (por ejemplo, combinar datos de ventas con clima).</li>
-    <li><strong>Representatividad:</strong> Los datos deben reflejar el fenómeno real. Si entrenas un modelo de fraudes solo con datos de un país, fallará al detectar fraudes globales.</li>
-    <li><strong>Actualización:</strong> En casos como detección de fraudes o recomendaciones, es clave que los datos estén frescos.</li>
-</ul>
+  <h3>✅ Calidad</h3>
+  <ul>
+    <li><strong>Buen ejemplo:</strong> Dataset de clientes con fechas de nacimiento válidas, sin duplicados, y campos completos como nombre, correo e historial de compras.</li>
+    <li><strong>Mal ejemplo:</strong> Fechas como “32/13/2022”, correos faltantes o clientes registrados varias veces con variaciones en el nombre.</li>
+  </ul>
 
-<p><strong>Recuerda:</strong> Garbage In, Garbage Out. Un mal dataset no puede producir un buen modelo, sin importar cuán avanzado sea el algoritmo.</p>
+  <h3>✅ Volumen</h3>
+  <ul>
+    <li><strong>Buen ejemplo:</strong> 50,000 transacciones de e-commerce para entrenar un modelo de recomendaciones.</li>
+    <li><strong>Mal ejemplo:</strong> Solo 80 registros: el modelo no generaliza y se sobreajusta fácilmente.</li>
+  </ul>
+
+  <h3>✅ Variedad</h3>
+  <ul>
+    <li><strong>Buen ejemplo:</strong> Datos de ventas, clima e inventario combinados para predecir la demanda en supermercados.</li>
+    <li><strong>Mal ejemplo:</strong> Solo usar historial de ventas sin considerar promociones o eventos especiales.</li>
+  </ul>
+
+  <h3>✅ Representatividad</h3>
+  <ul>
+    <li><strong>Buen ejemplo:</strong> Datos de fraude de múltiples países, monedas y tipos de transacciones.</li>
+    <li><strong>Mal ejemplo:</strong> Entrenar solo con datos de un país y esperar resultados globales.</li>
+  </ul>
+
+  <h3>✅ Actualización</h3>
+  <ul>
+    <li><strong>Buen ejemplo:</strong> Sistema de recomendaciones que se entrena diariamente con interacciones recientes.</li>
+    <li><strong>Mal ejemplo:</strong> Datos de hace 3 años usados para detectar fraudes actuales.</li>
+  </ul>
+
+  <p><strong>💡 Recuerda:</strong> <em>Garbage In, Garbage Out.</em> No importa cuán avanzado sea tu algoritmo: un mal dataset generará malos resultados.</p>
+</section>
+
 
 <hr>
 
