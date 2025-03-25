@@ -1,4 +1,4 @@
-<h1>Módulo 8: Preparación para la Certificación AWS</h1>
+<h1>Módulo 9: Preparación para la Certificación AWS</h1>
 
 <h2>Objetivo</h2>
 <p>En este último módulo consolidaremos todos los conceptos clave aprendidos a lo largo del curso. Además, revisaremos el enfoque específico que utiliza AWS para evaluar tus conocimientos en el examen <strong>AWS Certified Machine Learning - Specialty (MLS-C01)</strong>.</p>
