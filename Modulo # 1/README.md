@@ -35,13 +35,58 @@ Esto incluye entender lenguaje natural, reconocer imágenes, resolver problemas 
 <hr>
 
 
-<h2>¿Qué es Machine Learning?</h2>
+<section>
+  <h2>¿Qué es Machine Learning?</h2>
+  <p>
+    <strong>Machine Learning</strong>, o <em>aprendizaje automático</em>, es una rama de la <strong>inteligencia artificial</strong> que permite a las computadoras aprender patrones a partir de datos, sin necesidad de ser programadas explícitamente para cada tarea.
+  </p>
+  <p>
+    En un sistema tradicional, un programador define reglas fijas: “Si pasa X, entonces haz Y”. En cambio, en Machine Learning, el modelo analiza datos históricos, detecta patrones y <strong>aprende por sí mismo</strong> las reglas que explican esos datos.
+  </p>
 
-<p><strong>Machine Learning</strong>, o <strong>aprendizaje automático</strong>, es una rama de la <strong>inteligencia artificial</strong> 
-que permite a las computadoras aprender patrones a partir de datos, sin necesidad de ser programadas explícitamente para cada tarea.</p>
+  <h3>🔍 Ejemplo ilustrativo</h3>
+  <p><strong>Problema:</strong> Queremos clasificar si un email es <code>spam</code> o <code>no spam</code>.</p>
 
-<p>En un sistema tradicional, un programador define reglas fijas: “Si pasa X, entonces haz Y”. 
-En cambio, en Machine Learning, el modelo analiza datos históricos, detecta patrones y aprende por sí mismo las reglas que explican esos datos.</p>
+  <h4>✅ Enfoque tradicional (reglas fijas)</h4>
+  <pre><code># Reglas hechas a mano
+def clasificar_email(email):
+    if "gana dinero rápido" in email.lower():
+        return "spam"
+    elif "oferta exclusiva" in email.lower():
+        return "spam"
+    else:
+        return "no spam"
+  </code></pre>
+
+  <p>Este método requiere que alguien escriba manualmente todas las reglas posibles. Es difícil de escalar.</p>
+
+  <h4>🤖 Enfoque con Machine Learning</h4>
+  <pre><code>from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+# Dataset de ejemplo
+emails = ["Gana dinero rápido", "Oferta exclusiva para ti", "Reunión a las 10", "Informe mensual adjunto"]
+etiquetas = ["spam", "spam", "no spam", "no spam"]
+
+# Vectorizamos el texto
+vectorizer = CountVectorizer()
+X = vectorizer.fit_transform(emails)
+
+# Entrenamos el modelo
+modelo = MultinomialNB()
+modelo.fit(X, etiquetas)
+
+# Probamos con un nuevo email
+nuevo_email = ["Gana una oferta exclusiva hoy"]
+X_nuevo = vectorizer.transform(nuevo_email)
+print(modelo.predict(X_nuevo))  # Resultado: ['spam']
+  </code></pre>
+
+  <p>En este caso, el modelo aprende por sí solo las palabras más comunes en emails spam y toma decisiones basadas en datos reales.</p>
+
+  <p><strong>Conclusión:</strong> Con Machine Learning, en lugar de escribir reglas manuales, dejamos que el sistema <em>aprenda desde los datos</em>. Esto permite adaptabilidad, escalabilidad y mejores resultados en problemas complejos.</p>
+</section>
+
 
 <h3>Un poco de historia</h3>
 <p>El término <strong>Machine Learning</strong> fue acuñado por <strong>Arthur Samuel</strong> en 1959, 
