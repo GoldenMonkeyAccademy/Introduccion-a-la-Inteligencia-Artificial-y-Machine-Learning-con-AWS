@@ -1,4 +1,4 @@
-<h1>Módulo Extra: Inteligencia Artificial Generativa (GenAI) en AWS</h1>
+<h1>Módulo # 8: Inteligencia Artificial Generativa (GenAI) en AWS</h1>
 
 <h2>Objetivo</h2>
 <p>En este módulo aprenderás qué es la Inteligencia Artificial Generativa, cómo ha evolucionado, qué servicios ofrece AWS para trabajar con ella, y cómo puedes aplicarla en proyectos reales de Machine Learning. También revisaremos sus principales casos de uso, retos y buenas prácticas.</p>
