@@ -1,97 +1,96 @@
-<h1>Introducción a la Inteligencia Artificial y Machine Learning con AWS</h1>
+<h1>Introduction to Artificial Intelligence and Machine Learning with AWS</h1>
 
-<p>Descubre cómo funciona la Inteligencia Artificial y el Machine Learning, y aprende a aplicarlos usando los servicios de AWS. Un curso práctico, claro y sin tecnicismos complejos, ideal para entender IA y dar tus primeros pasos en proyectos reales.
+<p>Discover how Artificial Intelligence and Machine Learning work, and learn how to apply them using AWS services. This is a practical, clear, and beginner-friendly course—ideal for understanding AI and taking your first steps in real-world projects.</p>
 
-Introducción a la Inteligencia Artificial y Machine Learning con AWS
+<p>Artificial Intelligence is much more than a tech trend—it's a powerful tool that's transforming industries, business models, and the way we make decisions. However, for many professionals, AI and Machine Learning (ML) still sound like complicated concepts reserved for data scientists or advanced math experts.</p>
 
-La Inteligencia Artificial es mucho más que una tendencia tecnológica: es una herramienta poderosa que está redefiniendo industrias, modelos de negocio y la forma en que tomamos decisiones. Sin embargo, para muchos profesionales, la IA y el Machine Learning (ML) siguen sonando como conceptos complejos, reservados solo para científicos de datos o expertos en matemáticas avanzadas.
+<p>This course is designed to break down those barriers and bring you into the real world of AI in a practical and accessible way, using AWS—the leading cloud platform—as our foundation. Through real examples, simple explanations, and guided exercises, you'll learn how to leverage AI to solve problems, automate processes, and make smarter decisions.</p>
 
-Este curso está diseñado para romper esa barrera y acercarte al mundo real de la IA de una forma práctica y clara, usando como base los servicios de AWS, la plataforma líder en la nube. A través de ejemplos reales, explicaciones sencillas y ejercicios guiados, descubrirás cómo aprovechar la inteligencia artificial para resolver problemas, automatizar procesos y tomar decisiones más inteligentes.
+<p>And if you're looking to formalize your knowledge, this course is also a great first step toward certifications like the AWS Certified Machine Learning – Specialty (MLS-C01). But that’s not the only goal—the main purpose is to help you understand how AI works and how you can apply it in your daily work.</p>
 
-Además, si te interesa formalizar tus conocimientos, este curso también te servirá como una excelente preparación inicial para obtener certificaciones como la AWS Certified Machine Learning - Specialty (MLS-C01), aunque ese no es el único objetivo: el propósito principal es que entiendas cómo funciona la IA y cómo puedes aplicarla en tu día a día.</p>
-
-<h2>¿Qué aprenderás?</h2>
+<h2>What You’ll Learn</h2>
 <ul>
-    <li>Conceptos clave de Inteligencia Artificial y Machine Learning explicados en lenguaje simple.</li>
-    <li>Cómo preparar datos, entrenar modelos y ponerlos en producción usando AWS.</li>
-    <li>Aplicaciones prácticas de IA en sectores como salud, finanzas, comercio y entretenimiento.</li>
-    <li>Buenas prácticas para trabajar con proyectos de ML en la nube.</li>
-    <li>Primer acercamiento a la certificación AWS Certified Machine Learning - Specialty (MLS-C01).</li>
+    <li>Key concepts of Artificial Intelligence and Machine Learning explained in simple terms</li>
+    <li>How to prepare data, train models, and deploy them using AWS</li>
+    <li>Practical AI applications in healthcare, finance, retail, and entertainment</li>
+    <li>Best practices for running ML projects in the cloud</li>
+    <li>Introductory preparation for the AWS Certified Machine Learning – Specialty (MLS-C01)</li>
 </ul>
 
-<h2>¿Para quién es este curso?</h2>
+<h2>Who This Course Is For</h2>
 <ul>
-    <li>Profesionales de cualquier industria interesados en entender el impacto real de la IA.</li>
-    <li>Líderes de negocio o managers que quieren tomar decisiones basadas en datos.</li>
-    <li>Estudiantes o curiosos tecnológicos que quieren dar sus primeros pasos en Machine Learning.</li>
-    <li>Ingenieros o arquitectos que buscan aprender cómo AWS facilita trabajar con IA.</li>
-    <li>Cualquiera que quiera entender cómo las empresas ya están usando IA y ML hoy.</li>
+    <li>Professionals from any industry looking to understand AI’s real-world impact</li>
+    <li>Business leaders or managers who want to make data-driven decisions</li>
+    <li>Students or tech enthusiasts ready to take their first steps in Machine Learning</li>
+    <li>Engineers or architects wanting to learn how AWS supports AI workflows</li>
+    <li>Anyone curious about how companies are already using AI and ML today</li>
 </ul>
 
-<h3>No necesitas ser programador ni científico de datos</h3>
-<p>Explicamos cada concepto desde lo más básico y todas las prácticas están guiadas paso a paso. Lo único que necesitas es curiosidad, ganas de aprender y estar abierto a descubrir cómo la IA puede transformar cualquier industria.</p>
+<h3>No Programming or Data Science Background Required</h3>
+<p>We explain every concept from the ground up, and all exercises are fully guided step by step. All you need is curiosity, a desire to learn, and an open mind to discover how AI can transform any industry.</p>
 
-<h2>📚 Módulos del Curso</h2>
+<h2>📚 Course Modules</h2>
 
-<h3>Módulo 1: Introducción a la IA, el ML y el ecosistema AWS</h3>
+<h3>Module 1: Introduction to AI, ML, and the AWS Ecosystem</h3>
 <ul>
-    <li>Qué es IA y ML (conceptos y aplicaciones reales)</li>
-    <li>Por qué AWS es clave para democratizar la IA</li>
-    <li>Presentación de los servicios de AWS para IA/ML</li>
-    <li>Configurando el entorno AWS (IAM, S3, SageMaker)</li>
+    <li>What AI and ML are (concepts and real-world use cases)</li>
+    <li>Why AWS is key to democratizing AI</li>
+    <li>Overview of AWS services for AI/ML</li>
+    <li>Setting up your AWS environment (IAM, S3, SageMaker)</li>
 </ul>
 
-<h3>Módulo 2: Preparando datos para IA/ML</h3>
+<h3>Module 2: Preparing Data for AI/ML</h3>
 <ul>
-    <li>Qué es un buen dataset (calidad, volumen, formatos)</li>
-    <li>Crear repositorios de datos en AWS (S3, Redshift)</li>
-    <li>Pipelines de ingesta (Glue, Kinesis, Lambda)</li>
-    <li>Práctica: Tu primer pipeline de datos en AWS</li>
+    <li>What makes a good dataset (quality, volume, formats)</li>
+    <li>Creating data repositories in AWS (S3, Redshift)</li>
+    <li>Data ingestion pipelines (Glue, Kinesis, Lambda)</li>
+    <li>Hands-on: Build your first data pipeline in AWS</li>
 </ul>
 
-<h3>Módulo 3: Exploración y limpieza de datos</h3>
+<h3>Module 3: Exploring and Cleaning Data</h3>
 <ul>
-    <li>Limpieza, transformación y Feature Engineering</li>
-    <li>Visualización de datos (QuickSight, Pandas, Matplotlib)</li>
-    <li>Práctica: Explorando datos reales en SageMaker</li>
+    <li>Cleaning, transforming, and feature engineering</li>
+    <li>Data visualization (QuickSight, Pandas, Matplotlib)</li>
+    <li>Hands-on: Explore real datasets in SageMaker</li>
 </ul>
 
-<h3>Módulo 4: Creando modelos de Machine Learning</h3>
+<h3>Module 4: Building Machine Learning Models</h3>
 <ul>
-    <li>Tipos de ML: supervisado, no supervisado, refuerzo</li>
-    <li>Selección de algoritmos (casos reales)</li>
-    <li>Entrenamiento de modelos en SageMaker (XGBoost, CNNs)</li>
-    <li>Práctica: Entrena tu primer modelo en AWS</li>
+    <li>Types of ML: supervised, unsupervised, reinforcement</li>
+    <li>Selecting the right algorithm (real-world examples)</li>
+    <li>Model training in SageMaker (XGBoost, CNNs)</li>
+    <li>Hands-on: Train your first model on AWS</li>
 </ul>
 
-<h3>Módulo 5: Evaluación y mejora de modelos</h3>
+<h3>Module 5: Evaluating and Improving Models</h3>
 <ul>
-    <li>Métricas clave (AUC, RMSE, F1, precisión)</li>
-    <li>Tuning de hiperparámetros (Grid Search, AutoML)</li>
-    <li>Cómo evitar overfitting y bias</li>
-    <li>Práctica: Optimiza tu modelo en AWS</li>
+    <li>Key metrics (AUC, RMSE, F1 score, accuracy)</li>
+    <li>Hyperparameter tuning (Grid Search, AutoML)</li>
+    <li>How to avoid overfitting and bias</li>
+    <li>Hands-on: Optimize your model in AWS</li>
 </ul>
 
-<h3>Módulo 6: Despliegue y operación de modelos</h3>
+<h3>Module 6: Deploying and Operating Models</h3>
 <ul>
-    <li>Opciones de despliegue (Endpoints, Lambda, API Gateway)</li>
-    <li>Monitoreo en producción (CloudWatch, Model Monitor)</li>
-    <li>A/B Testing y reentrenamiento</li>
-    <li>Práctica: Publica tu modelo como API</li>
+    <li>Deployment options (Endpoints, Lambda, API Gateway)</li>
+    <li>Monitoring in production (CloudWatch, Model Monitor)</li>
+    <li>A/B testing and retraining</li>
+    <li>Hands-on: Publish your model as an API</li>
 </ul>
 
-<h3>Módulo 7: Seguridad, costos y mejores prácticas</h3>
+<h3>Module 7: Security, Costs, and Best Practices</h3>
 <ul>
-    <li>Configuración de permisos (IAM roles)</li>
-    <li>Costos de ML en la nube (ahorros, tips)</li>
-    <li>Mejores prácticas para proyectos reales de IA</li>
-    <li>Práctica: Checklist de seguridad y costos para ML</li>
+    <li>Permission setup (IAM roles)</li>
+    <li>Managing ML costs in the cloud (savings tips)</li>
+    <li>Best practices for real-world AI projects</li>
+    <li>Hands-on: ML cost and security checklist</li>
 </ul>
 
-<h3>Módulo 8 (Opcional): Camino hacia la certificación AWS</h3>
+<h3>Module 8 (Optional): Path to AWS Certification</h3>
 <ul>
-    <li>Cómo es el examen AWS MLS-C01</li>
-    <li>Qué temas cubre y cómo prepararse</li>
-    <li>Simulacro con preguntas reales</li>
-    <li>Tips para aprobar en el primer intento</li>
+    <li>What the AWS MLS-C01 exam is like</li>
+    <li>Topics covered and how to prepare</li>
+    <li>Practice quiz with real-style questions</li>
+    <li>Tips to pass on your first attempt</li>
 </ul>
+
