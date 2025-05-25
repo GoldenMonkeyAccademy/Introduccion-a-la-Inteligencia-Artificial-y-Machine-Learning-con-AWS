@@ -1,279 +1,278 @@
-<h1>Módulo 2: Preparando datos para IA/ML</h1>
+<h1>Module 2: Preparing Data for AI/ML</h1>
 
-<h2>Objetivo</h2>
-<p>En este módulo aprenderás por qué los datos son el alma de cualquier proyecto de Machine Learning, cómo evaluar la calidad de un dataset y qué opciones ofrece AWS para crear repositorios y pipelines de datos eficientes. 
-Al final, crearás tu primer pipeline real de datos en AWS, combinando almacenamiento, ingesta y procesamiento.</p>
+<h2>Objective</h2>
+<p>In this module, you'll learn why data is the heart of any Machine Learning project, how to evaluate the quality of a dataset, and what AWS offers to build efficient data repositories and pipelines. 
+By the end, you'll create your first real data pipeline in AWS, combining storage, ingestion, and processing.</p>
 
 <hr>
 
 <section>
-  <h2>¿Qué es un buen dataset para IA/ML?</h2>
-  <p>Un modelo es tan bueno como los datos con los que lo entrenas. Por eso, entender qué hace que un dataset sea útil es <strong>crítico</strong>. A continuación, te explicamos las características clave de un buen dataset, junto con ejemplos concretos:</p>
+  <h2>What Makes a Good Dataset for AI/ML?</h2>
+  <p>A model is only as good as the data it’s trained on. That’s why understanding what makes a dataset useful is <strong>critical</strong>. Below are the key characteristics of a good dataset, with practical examples:</p>
 
-  <h3>✅ Calidad</h3>
+  <h3>✅ Quality</h3>
   <ul>
-    <li><strong>Buen ejemplo:</strong> Dataset de clientes con fechas de nacimiento válidas, sin duplicados, y campos completos como nombre, correo e historial de compras.</li>
-    <li><strong>Mal ejemplo:</strong> Fechas como “32/13/2022”, correos faltantes o clientes registrados varias veces con variaciones en el nombre.</li>
+    <li><strong>Good example:</strong> Customer dataset with valid birthdates, no duplicates, and complete fields like name, email, and purchase history.</li>
+    <li><strong>Bad example:</strong> Dates like “32/13/2022”, missing emails, or duplicated customers with slight name variations.</li>
   </ul>
 
-  <h3>✅ Volumen</h3>
+  <h3>✅ Volume</h3>
   <ul>
-    <li><strong>Buen ejemplo:</strong> 50,000 transacciones de e-commerce para entrenar un modelo de recomendaciones.</li>
-    <li><strong>Mal ejemplo:</strong> Solo 80 registros: el modelo no generaliza y se sobreajusta fácilmente.</li>
+    <li><strong>Good example:</strong> 50,000 e-commerce transactions to train a recommendation model.</li>
+    <li><strong>Bad example:</strong> Only 80 records: the model can’t generalize and will overfit easily.</li>
   </ul>
 
-  <h3>✅ Variedad</h3>
+  <h3>✅ Variety</h3>
   <ul>
-    <li><strong>Buen ejemplo:</strong> Datos de ventas, clima e inventario combinados para predecir la demanda en supermercados.</li>
-    <li><strong>Mal ejemplo:</strong> Solo usar historial de ventas sin considerar promociones o eventos especiales.</li>
+    <li><strong>Good example:</strong> Combining sales, weather, and inventory data to forecast supermarket demand.</li>
+    <li><strong>Bad example:</strong> Only using sales history without accounting for promotions or events.</li>
   </ul>
 
-  <h3>✅ Representatividad</h3>
+  <h3>✅ Representativeness</h3>
   <ul>
-    <li><strong>Buen ejemplo:</strong> Datos de fraude de múltiples países, monedas y tipos de transacciones.</li>
-    <li><strong>Mal ejemplo:</strong> Entrenar solo con datos de un país y esperar resultados globales.</li>
+    <li><strong>Good example:</strong> Fraud data from various countries, currencies, and transaction types.</li>
+    <li><strong>Bad example:</strong> Training only with data from one country and expecting global results.</li>
   </ul>
 
-  <h3>✅ Actualización</h3>
+  <h3>✅ Freshness</h3>
   <ul>
-    <li><strong>Buen ejemplo:</strong> Sistema de recomendaciones que se entrena diariamente con interacciones recientes.</li>
-    <li><strong>Mal ejemplo:</strong> Datos de hace 3 años usados para detectar fraudes actuales.</li>
+    <li><strong>Good example:</strong> A recommendation system retrained daily with recent user interactions.</li>
+    <li><strong>Bad example:</strong> Using data from three years ago to detect current fraud patterns.</li>
   </ul>
 
-  <p><strong>💡 Recuerda:</strong> <em>Garbage In, Garbage Out.</em> No importa cuán avanzado sea tu algoritmo: un mal dataset generará malos resultados.</p>
+  <p><strong>💡 Remember:</strong> <em>Garbage In, Garbage Out.</em> No matter how advanced your algorithm is, poor data will always yield poor results.</p>
 </section>
 
+<hr>
+
+<h2>Creating Data Repositories in AWS</h2>
+
+<h3>What Is a Data Lake?</h3>
+<p>A <strong>Data Lake</strong> is a central repository where <strong>all types of data</strong> are stored—regardless of format or structure. It can contain:</p>
+<ul>
+    <li>Structured data (CSV tables, relational database exports)</li>
+    <li>Semi-structured data (JSON or XML files)</li>
+    <li>Unstructured data (images, videos, logs)</li>
+</ul>
+<p>The idea is to store data as-is, without filtering or transforming it right away. This allows for exploration and processing later, depending on the use case.</p>
 
 <hr>
 
-<h2>Crear repositorios de datos en AWS</h2>
+<h2>Amazon S3: The Core of the Data Lake</h2>
+<p><strong>Amazon S3</strong> is the core service for building Data Lakes on AWS. It stores raw data, processed data, trained models, and ML artifacts.</p>
 
-<h3>¿Qué es un Data Lake?</h3>
-<p>Un <strong>Data Lake</strong> es un repositorio central donde se almacenan <strong>todos los datos</strong>, sin importar su formato o estructura. Puede contener:</p>
+<h3>Why is it Key for AI/ML?</h3>
 <ul>
-    <li>Datos estructurados (tablas CSV, bases relacionales exportadas).</li>
-    <li>Datos semi-estructurados (archivos JSON o XML).</li>
-    <li>Datos no estructurados (imágenes, videos, logs).</li>
-</ul>
-<p>La idea es guardar los datos tal como llegan, sin filtrarlos ni transformarlos de inmediato. Esto permite explorarlos o procesarlos más adelante según las necesidades.</p>
-
-<hr>
-
-<h2>Amazon S3: El corazón del Data Lake</h2>
-<p><strong>Amazon S3</strong> es el servicio central para construir Data Lakes en AWS. Almacena datos crudos, datos procesados, modelos entrenados y artefactos de ML.</p>
-
-<h3>¿Por qué es clave para IA/ML?</h3>
-<ul>
-    <li>✅ Flexibilidad: soporta múltiples formatos: CSV, JSON, Parquet, imágenes, videos.</li>
-    <li>✅ Escalabilidad: almacena petabytes sin preocuparse por límites.</li>
-    <li>✅ Integración: es compatible con SageMaker, Glue, Athena y más.</li>
+    <li>✅ Flexibility: supports many formats—CSV, JSON, Parquet, images, videos</li>
+    <li>✅ Scalability: stores petabytes without worrying about limits</li>
+    <li>✅ Integration: works with SageMaker, Glue, Athena, and more</li>
 </ul>
 
-<h3>Clases de almacenamiento</h3>
+<h3>Storage Classes</h3>
 <table border="1" cellpadding="5" cellspacing="0">
     <thead>
         <tr>
-            <th>Clase</th>
-            <th>Descripción</th>
-            <th>Casos de uso</th>
+            <th>Class</th>
+            <th>Description</th>
+            <th>Use Cases</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>S3 Standard</td>
-            <td>Alta disponibilidad y durabilidad.</td>
-            <td>Datos activos o en uso frecuente.</td>
+            <td>High availability and durability</td>
+            <td>Frequently accessed data</td>
         </tr>
         <tr>
             <td>S3 Intelligent-Tiering</td>
-            <td>Mueve datos automáticamente entre caliente y frío.</td>
-            <td>Datos con patrones de acceso impredecibles.</td>
+            <td>Automatically moves data between hot and cold tiers</td>
+            <td>Unpredictable access patterns</td>
         </tr>
         <tr>
             <td>S3 Standard-IA</td>
-            <td>Para datos accedidos esporádicamente.</td>
-            <td>Backups recientes o históricos.</td>
+            <td>Infrequent access data</td>
+            <td>Recent or historical backups</td>
         </tr>
         <tr>
             <td>S3 Glacier Instant Retrieval</td>
-            <td>Archivos fríos pero con acceso rápido.</td>
-            <td>Datos antiguos, consultas ocasionales.</td>
+            <td>Cold storage with fast access</td>
+            <td>Old data, occasional queries</td>
         </tr>
         <tr>
             <td>S3 Glacier Deep Archive</td>
-            <td>Almacenamiento más barato.</td>
-            <td>Archivos regulatorios o históricos.</td>
+            <td>Lowest-cost storage</td>
+            <td>Regulatory or long-term archives</td>
         </tr>
     </tbody>
 </table>
 
 <h3>Lifecycle Rules</h3>
-<p>Con <strong>Lifecycle Rules</strong>, S3 mueve automáticamente objetos entre clases o los elimina tras cierto tiempo. Ejemplo:</p>
+<p>With <strong>Lifecycle Rules</strong>, S3 can automatically move objects between storage classes or delete them after a set time. Example:</p>
 <ul>
-    <li>🔄 Mover datos crudos a Glacier tras 90 días.</li>
-    <li>🗑️ Eliminar archivos temporales tras 30 días.</li>
+    <li>🔄 Move raw data to Glacier after 90 days</li>
+    <li>🗑️ Delete temporary files after 30 days</li>
 </ul>
 
-<h3>Seguridad: Bucket Policies y Cifrado</h3>
-<p>Todo bucket debe tener reglas claras de acceso. Con <strong>Bucket Policies</strong>, defines:</p>
+<h3>Security: Bucket Policies and Encryption</h3>
+<p>Every bucket should have clear access rules. With <strong>Bucket Policies</strong>, you define:</p>
 <ul>
-    <li>Quién puede leer o escribir.</li>
-    <li>Qué servicios acceden (ej: solo SageMaker o Glue).</li>
-    <li>Permitir o bloquear acceso público.</li>
+    <li>Who can read or write</li>
+    <li>Which services can access it (e.g., only SageMaker or Glue)</li>
+    <li>Whether public access is allowed or denied</li>
 </ul>
 
-<p>Además, S3 permite cifrado automático:</p>
+<p>S3 also supports automatic encryption:</p>
 <ul>
-    <li>SSE-S3 (cifrado gestionado por AWS).</li>
-    <li>SSE-KMS (cifrado con claves de cliente en AWS KMS).</li>
-    <li>Cifrado lado cliente (subir archivos ya cifrados).</li>
+    <li>SSE-S3 (server-side encryption managed by AWS)</li>
+    <li>SSE-KMS (encryption with customer keys in AWS KMS)</li>
+    <li>Client-side encryption (upload pre-encrypted files)</li>
 </ul>
 
 <h3>VPC Endpoints</h3>
-<p>Si tus notebooks o pipelines corren dentro de una VPC privada, usa un <strong>VPC Endpoint</strong> para conectarte a S3 sin pasar por Internet pública.</p>
+<p>If your notebooks or pipelines run in a private VPC, use a <strong>VPC Endpoint</strong> to connect to S3 without using the public internet.</p>
 
 <hr>
 
-<h2>Otros servicios clave de Data Engineering en AWS</h2>
+<h2>Other Key AWS Services for Data Engineering</h2>
 
 <h3>Amazon Kinesis Data Streams</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio diseñado para la ingesta de datos en tiempo real. Permite capturar flujos continuos de datos, como logs, clics web, métricas de sensores IoT o eventos financieros.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A real-time data ingestion service. It captures continuous data streams like logs, website clicks, IoT metrics, or financial events.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Procesar logs de servidores web en tiempo real.</li>
-    <li>Analizar clics y comportamiento de usuarios mientras navegan en una app.</li>
-    <li>Capturar datos de sensores IoT (temperatura, humedad, etc.).</li>
+    <li>Processing web server logs in real time</li>
+    <li>Analyzing user behavior while browsing an app</li>
+    <li>Capturing sensor data (e.g., temperature, humidity)</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Al capturar datos en tiempo real, puedes alimentar modelos de detección de fraudes, recomendación o mantenimiento predictivo con información fresca y actualizada.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Real-time data can feed fraud detection models, recommendation systems, or predictive maintenance engines with fresh, actionable input.</p>
 
 <hr>
 
 <h3>Amazon Kinesis Data Firehose</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Un servicio completamente gestionado que toma datos en streaming y los entrega directamente a S3, Redshift o OpenSearch, sin necesidad de escribir código adicional.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A fully managed service that delivers streaming data directly to S3, Redshift, or OpenSearch—no extra code required.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Capturar logs y guardarlos automáticamente en S3.</li>
-    <li>Alimentar un Data Lake con datos crudos desde Firehose.</li>
-    <li>Indexar logs en OpenSearch para análisis de seguridad.</li>
+    <li>Capture logs and automatically store them in S3</li>
+    <li>Stream raw data into a Data Lake</li>
+    <li>Index logs into OpenSearch for security analytics</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Permite construir pipelines de datos sin servidores y sin código, asegurando que los datos lleguen a S3 o Redshift listos para ser usados en modelos.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Enables no-code, serverless data pipelines that ensure data lands in S3 or Redshift ready for modeling.</p>
 
 <hr>
 
 <h3>Amazon Managed Service for Apache Flink</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio gestionado para ejecutar aplicaciones de procesamiento de datos en streaming usando Apache Flink.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A managed service to run real-time data processing apps using Apache Flink.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Calcular métricas o KPIs en tiempo real.</li>
-    <li>Detectar patrones complejos (análisis de series temporales).</li>
-    <li>Enriquecer streams con datos históricos.</li>
+    <li>Calculate metrics or KPIs in real time</li>
+    <li>Detect complex patterns (time series analysis)</li>
+    <li>Enrich streams with historical data</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Cuando tus modelos dependen de datos en movimiento (por ejemplo, detección de fraudes o análisis de logs), Flink permite transformar y enriquecer esos datos antes de alimentar al modelo.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>When your models rely on streaming data (e.g., fraud detection, log analysis), Flink can transform and enrich the data before it reaches the model.</p>
 
 <hr>
 
 <h3>AWS Glue</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio serverless de ETL (Extract, Transform, Load) que permite limpiar, transformar y mover datos entre fuentes como S3, RDS o Redshift.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A serverless ETL (Extract, Transform, Load) service for cleaning, transforming, and moving data between sources like S3, RDS, and Redshift.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Transformar datos crudos en S3 a formatos optimizados (Parquet).</li>
-    <li>Unir datos de múltiples fuentes (logs de aplicaciones + ventas).</li>
-    <li>Limpiar datos eliminando registros duplicados o corruptos.</li>
+    <li>Convert raw data in S3 to optimized formats (like Parquet)</li>
+    <li>Join data from multiple sources (e.g., app logs + sales)</li>
+    <li>Clean data by removing duplicates or corrupted records</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Modelos de Machine Learning solo son tan buenos como los datos que usan. Glue es clave para asegurarte que los datos estén limpios y listos para entrenar modelos.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>ML models are only as good as the data behind them. Glue ensures data is clean and ready for training.</p>
 
 <hr>
 
 <h3>Glue Data Catalog</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Es un catálogo centralizado que almacena el esquema y metadatos de tus datasets, tanto en S3 como en otras fuentes. Es la “biblioteca” que describe dónde están tus datos y cómo se estructuran.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A centralized catalog that stores schema and metadata for datasets in S3 and other sources—essentially a “library” that describes where data lives and how it’s structured.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Explorar y documentar el Data Lake.</li>
-    <li>Permitir que Athena consulte datos de S3.</li>
-    <li>Servir como repositorio central de metadatos.</li>
+    <li>Explore and document your Data Lake</li>
+    <li>Enable Athena to query S3 data</li>
+    <li>Serve as a central metadata repository</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Permite que analistas, científicos de datos y modelos accedan a los datos con contexto, sabiendo qué significan cada columna, tipo de dato o tabla.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Helps analysts, data scientists, and models access data with full context—knowing what each column, data type, and table means.</p>
 
 <hr>
 
 <h3>Glue DataBrew</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Herramienta visual sin código para limpiar y preparar datos. Permite realizar transformaciones comunes como eliminar nulos, cambiar formatos o detectar outliers con clics.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A no-code visual tool to clean and prepare data. Supports common transformations like removing nulls, changing formats, or detecting outliers—all with clicks.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Limpiar un dataset antes de entrenar un modelo.</li>
-    <li>Transformar formatos (de JSON a Parquet).</li>
-    <li>Analizar calidad de datos sin escribir código.</li>
+    <li>Clean a dataset before training a model</li>
+    <li>Convert formats (e.g., JSON to Parquet)</li>
+    <li>Analyze data quality without writing code</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Ideal para usuarios no técnicos o para realizar exploración rápida antes de un pipeline formal de ETL.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Perfect for non-technical users or quick data exploration before building a full ETL pipeline.</p>
 
 <hr>
 
 <h3>Amazon Athena</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio serverless que permite ejecutar consultas SQL directamente sobre datos almacenados en S3. No requiere infraestructura previa.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A serverless service that lets you run SQL queries directly on data in S3—no infrastructure needed.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Analizar datasets crudos antes de entrenar modelos.</li>
-    <li>Validar resultados de pipelines ETL.</li>
-    <li>Crear reportes ad-hoc sobre datos en S3.</li>
+    <li>Explore raw datasets before model training</li>
+    <li>Validate ETL pipeline outputs</li>
+    <li>Create ad-hoc reports on S3 data</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Te permite explorar y entender tus datos antes de pasarlos al modelo, ayudando a descubrir patrones o problemas de calidad.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Lets you understand your data before feeding it into a model—helping identify patterns or quality issues early on.</p>
 
 <hr>
 
 <h3>AWS Step Functions</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio de orquestación que permite coordinar múltiples servicios de AWS en flujos visuales (workflows), ideal para pipelines completos de datos.</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A workflow orchestration service that coordinates multiple AWS services in visual flows—ideal for full data pipelines.</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Pipeline completo: ingesta, transformación, entrenar modelo.</li>
-    <li>Automatizar flujos de validación de datos.</li>
-    <li>Coordinar tareas entre Lambda, Glue y SageMaker.</li>
+    <li>End-to-end pipeline: ingestion, transformation, model training</li>
+    <li>Automate data validation workflows</li>
+    <li>Coordinate tasks across Lambda, Glue, and SageMaker</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Los proyectos de ML reales no son tareas aisladas. Con Step Functions, defines todo el flujo de trabajo, garantizando orden y control.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Real-world ML projects aren’t isolated tasks. With Step Functions, you define the entire pipeline and keep things organized and traceable.</p>
 
 <hr>
 
 <h3>AWS DMS (Database Migration Service)</h3>
-<p><strong>¿Qué es?</strong></p>
-<p>Servicio que migra datos desde bases on-premises hacia AWS, o entre bases dentro de AWS. Soporta migraciones heterogéneas (Oracle a PostgreSQL, por ejemplo).</p>
-<p><strong>Casos de uso:</strong></p>
+<p><strong>What is it?</strong></p>
+<p>A service that migrates data from on-premises databases to AWS, or between AWS databases. Supports heterogeneous migrations (e.g., Oracle to PostgreSQL).</p>
+<p><strong>Use Cases:</strong></p>
 <ul>
-    <li>Migrar datos históricos desde un Oracle local hacia S3.</li>
-    <li>Mover bases transaccionales desde MySQL a Aurora.</li>
-    <li>Replicar cambios en tiempo real desde una base productiva a un Data Lake.</li>
+    <li>Migrate historical data from on-prem Oracle to S3</li>
+    <li>Move transactional DBs from MySQL to Aurora</li>
+    <li>Replicate real-time changes from production DB to Data Lake</li>
 </ul>
-<p><strong>¿Por qué es relevante para IA/ML?</strong></p>
-<p>Muchas veces los datos para entrenar modelos provienen de bases existentes. DMS facilita la extracción y sincronización de esos datos hacia AWS.</p>
+<p><strong>Why is it relevant to AI/ML?</strong></p>
+<p>Training data often lives in existing databases. DMS makes it easy to extract and sync that data into AWS.</p>
 
 <hr>
 
-<h2>Práctica: Construir tu primer pipeline de datos</h2>
+<h2>Hands-On: Build Your First Data Pipeline</h2>
 <ol>
-    <li>Crear un bucket S3 llamado "ml-curso-datos".</li>
-    <li>Subir ventas.csv.</li>
-    <li>Crear trigger S3 que llame a Lambda.</li>
-    <li>Lambda valida y lanza Glue.</li>
-    <li>Glue transforma y guarda en "ml-curso-datos-limpiados".</li>
-    <li>Consultar con Athena.</li>
+    <li>Create an S3 bucket called "ml-course-data"</li>
+    <li>Upload <code>sales.csv</code></li>
+    <li>Create an S3 trigger that invokes a Lambda function</li>
+    <li>Lambda validates and triggers a Glue job</li>
+    <li>Glue transforms the data and saves it to "ml-course-data-cleaned"</li>
+    <li>Query the results with Athena</li>
 </ol>
 
 <hr>
 
-<h2>Conclusión</h2>
-<p>Sin buenos datos, no hay buen Machine Learning. En AWS, S3 es el corazón del Data Lake, y servicios como Glue, Athena y Kinesis complementan el ecosistema.</p>
-<p>En el próximo módulo, aprenderemos a explorar y limpiar estos datos antes de entrenar un modelo.</p>
+<h2>Conclusion</h2>
+<p>Without good data, there’s no good Machine Learning. In AWS, S3 is the heart of the Data Lake—and services like Glue, Athena, and Kinesis complete the ecosystem.</p>
+<p>In the next module, we’ll explore and clean that data before training a model.</p>
